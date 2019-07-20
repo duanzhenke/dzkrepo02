@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // <!--工厂方式创建的对象-->
+    function creatPerson(name,age,gender) {
+        var object = new Object();
+        object.name = name;
+        object.age = age;
+        object.gender = gender;
+        object.say = function () {
+            alert(this.name)
+        };
+        return object;
+
+    }
+   var obj= creatPerson("段震科",26,"男");
+    // obj.say();
+    // console.log(obj)
+
+
+//    创建一个构造函数，方式与普通函数一样子的
+
+    function Stundent(name,age) {
+        this.name=name;
+        this.age=age;
+
+    }
+var stu= new Stundent("hahao",25);
+    console.log(stu)
+    console.log(stu instanceof Stundent)
+
+
+</script>
+
+</body>
+</html>
